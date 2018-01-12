@@ -10,8 +10,9 @@ const Todo = require('../models/todo');
 indexRoutes.get('/', (request, response) => {
   response.render('index.ejs', {
     documentTitle: "Todo List",
-    todos: Todo.find()
+    todos: Todo.findOne()
   })
+  console.log(Todo.findOne());
 })
 indexRoutes.post('/', (request, response) => {
   let todo = new Todo(request.body);
@@ -20,7 +21,10 @@ indexRoutes.post('/', (request, response) => {
       console.log("index error: " + err);
       response.sendStatus(500);
     }
-    response.status(200).send(createdTodoObject);
+    response.render('index.ejs', {
+      documentTitle: "Todo List",
+      todos: Todo.findOne()
+    })
   });
 });
 

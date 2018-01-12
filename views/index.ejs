@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1><%= documentTitle %></h1>
-    <form id"addTodoForm" method="post" action="/">
+    <form id="addTodoForm" method="post" action="/">
       <div>
         <label for="task">Task</label>
         <input name="task" type="text" placeholder="Add task">
@@ -19,5 +19,17 @@
         <button>Add Todo</button>
       </div>
     </form>
+    <div id="todoList">
+        <span><% todos.task %></span>
+        <span><% todos.description %></span>
+        <% if (todos.complete) { %>
+          <span>X</span>
+      <% } else { %>
+         <span>O</span>
+    <%  } %>
+        <form class="delete" method="delete" action="/">
+          <button id='<% todos._id %>'>Delete</button>
+        </form>
+    </div>
   </body>
 </html>
