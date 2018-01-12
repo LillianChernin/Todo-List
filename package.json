@@ -1,0 +1,33 @@
+{
+  "name": "todo-list-fullstack",
+  "version": "1.0.0",
+  "description": "Todo list made with express, mongoose, mongodb, and ejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LillianChernin/Todo-List.git"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb",
+    "ejs",
+    "todo"
+  ],
+  "author": "Lillian Chernin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LillianChernin/Todo-List/issues"
+  },
+  "homepage": "https://github.com/LillianChernin/Todo-List#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0"
+  }
+}
